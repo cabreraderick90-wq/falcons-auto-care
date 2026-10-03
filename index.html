@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falcon's Auto Care — Auto Detailing & Painting in Dubai</title>
+<meta name="description" content="Falcon's Auto Detailing & Painting L.L.C — Dubai's trusted auto detailing shop. Nano ceramic coating, paint correction, dent removal, trim restoration & full repaints. Book your free inspection today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M4 30 Q20 22 44 18 M8 38 Q22 32 42 28 M14 46 Q26 42 40 39' stroke='%23e8b923' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0e11;
+    --bg2:#12151a;
+    --card:#161a21;
+    --line:#242a33;
+    --gold:#e8b923;
+    --gold2:#f7d24b;
+    --text:#eef1f5;
+    --muted:#9aa3af;
+    --red:#e5484d;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed','Inter',sans-serif;line-height:1.05}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  section{padding:72px 0}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:10px;font-weight:600;font-size:15px;transition:.2s;border:none;cursor:pointer}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#16180d}
+  .btn-gold:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* promo strip */
+  .promo-strip{background:linear-gradient(90deg,#a33417,#c2410f);text-align:center;padding:8px 14px;font-size:13px;font-weight:600;letter-spacing:.4px}
+  .promo-strip b{color:#ffd98a}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(12,14,17,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  .logo{display:flex;align-items:center;gap:11px}
+  .logo svg{width:42px;height:42px;flex:none}
+  .logo-name{font-family:'Barlow Condensed';font-weight:800;font-size:24px;letter-spacing:1px;text-transform:uppercase}
+  .logo-name span{color:var(--gold)}
+  .logo-sub{font-size:10px;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;display:block;margin-top:-4px}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--muted)}
+  .nav-links a:hover{color:var(--gold)}
+  .nav .btn{padding:10px 20px;font-size:14px}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
+
+  /* hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;padding:80px 0}
+  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1920&q=80') center/cover no-repeat}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,14,17,.82) 0%,rgba(12,14,17,.62) 45%,rgba(12,14,17,.95) 100%),linear-gradient(90deg,rgba(12,14,17,.9) 0%,transparent 60%)}
+  .hero-inner{position:relative;z-index:2;max-width:640px}
+  .hero h1{font-size:clamp(44px,7vw,76px);font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{color:#c8cfd8;font-size:17px;margin:18px 0 8px;max-width:540px}
+  .hero .taglish{color:var(--gold2);font-weight:600}
+  .hero-ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .social-proof{display:flex;align-items:center;gap:10px;margin-top:34px;color:var(--muted);font-size:14px}
+  .social-proof .fb{width:34px;height:34px;border-radius:50%;background:#1877f2;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+  .stat-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(18,21,26,.7);border-radius:999px;padding:7px 16px}
+
+  /* trust strip */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);padding:18px 0}
+  .trust-items{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;font-size:13.5px;color:var(--muted);font-weight:500}
+  .trust-items b{color:var(--text)}
+  .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+
+  /* section titles */
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
+  .sec-head h2{font-size:clamp(32px,4.5vw,46px);font-weight:800;text-transform:uppercase}
+  .sec-head p{color:var(--muted);margin-top:10px}
+
+  /* services */
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative;transition:.2s}
+  .card:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .card .icon{width:48px;height:48px;border-radius:11px;background:rgba(232,185,35,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .card .icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:23px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .card p{color:var(--muted);font-size:14.5px;margin-top:8px}
+  .badge-promo{position:absolute;top:-11px;right:16px;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:6px;text-transform:uppercase}
+  .card .from{margin-top:14px;font-family:'Barlow Condensed';font-size:19px;font-weight:700;color:var(--gold)}
+  .card .from small{font-family:'Inter';font-size:11.5px;color:var(--muted);font-weight:400;display:block}
+
+  /* before/after */
+  .ba{background:var(--bg2)}
+  .ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:center;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+  .ba-grid .half{position:relative}
+  .ba-grid .half img{width:100%;height:340px;object-fit:cover;filter:saturate(.65) contrast(.92)}
+  .ba-grid .half.after img{filter:none}
+  .ba-grid .tag{position:absolute;top:16px;left:16px;font-family:'Barlow Condensed';font-weight:800;font-size:17px;letter-spacing:2px;padding:5px 16px;border-radius:7px;text-transform:uppercase}
+  .tag-before{background:rgba(12,14,17,.85);color:#cfd6df;border:1px solid var(--line)}
+  .tag-after{background:var(--gold);color:#16180d}
+  .ba-arrow{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 -32px;z-index:3;box-shadow:0 6px 24px rgba(0,0,0,.55)}
+  .ba-arrow svg{width:26px;height:26px;stroke:#16180d;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .ba-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
+
+  /* pricing */
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:center;position:relative;transition:.2s}
+  .price-card:hover{border-color:var(--gold)}
+  .price-card h3{font-size:20px;font-weight:700;text-transform:uppercase}
+  .price-card .p{font-family:'Barlow Condensed';font-size:42px;font-weight:800;color:var(--gold);margin:10px 0 2px}
+  .price-card .p sup{font-size:19px;font-weight:600;color:var(--muted)}
+  .price-card .strike{color:var(--muted);text-decoration:line-through;font-size:14px}
+  .price-card ul{list-style:none;text-align:left;margin:16px 0;font-size:13.5px;color:var(--muted)}
+  .price-card li{padding:5px 0 5px 22px;position:relative}
+  .price-card li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700}
+  .price-card .promo-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:6px;white-space:nowrap}
+  .price-note{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+  .price-note a{color:var(--gold)}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:14px}
+  .gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid var(--line);transition:.25s}
+  .gallery img:hover{transform:scale(1.02);border-color:var(--gold)}
+  .gallery .tall{grid-row:span 2}
+
+  /* booking */
+  .book{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+  .book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+  .book-info h2{font-size:clamp(30px,4vw,42px);font-weight:800;text-transform:uppercase}
+  .book-info p{color:var(--muted);margin:14px 0}
+  .contact-line{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+  .contact-line .ci{width:38px;height:38px;flex:none;border-radius:10px;background:rgba(232,185,35,.1);display:flex;align-items:center;justify-content:center}
+  .contact-line .ci svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .contact-line b{display:block;font-size:15px}
+  .contact-line span{font-size:13.5px;color:var(--muted)}
+  form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin:14px 0 6px;letter-spacing:.3px}
+  label:first-child{margin-top:0}
+  input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:14.5px;outline:none;transition:.15s}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239aa3af' fill='none' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  textarea{resize:vertical;min-height:90px}
+  form .btn{width:100%;justify-content:center;margin-top:22px;font-size:16px}
+  .hp{position:absolute;left:-9999px;opacity:0}
+  .sent-banner{display:none;background:rgba(46,160,67,.12);border:1px solid #2ea04366;color:#7ee2a8;border-radius:10px;padding:14px 16px;font-size:14.5px;margin-bottom:18px}
+  .sent-banner.show{display:block}
+
+  /* reviews */
+  .rev-head{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:10px}
+  .g-badge{width:44px;height:44px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;font-family:Arial;color:#4285f4}
+  .rev-score{font-family:'Barlow Condensed';font-size:30px;font-weight:800}
+  .rev-score small{display:block;font-family:'Inter';font-size:12.5px;font-weight:400;color:var(--muted);letter-spacing:0}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:30px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
+  .review:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .review .stars{color:var(--gold);letter-spacing:2px;font-size:15px}
+  .review p{font-size:14.5px;margin:12px 0 16px;font-style:italic}
+  .review .who{font-size:13px;color:var(--muted)}
+  .review .who b{color:var(--text);font-style:normal}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:44px 0 30px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot .muted{color:var(--muted);font-size:13.5px}
+  .foot .muted b{color:var(--text)}
+
+  /* whatsapp float */
+  .wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,.5);z-index:60;transition:.2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  @media(max-width:900px){
+    .nav-links,.nav .btn-gold{display:none}
+    .burger{display:block}
+    .nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--bg2);flex-direction:column;padding:20px 22px;border-bottom:1px solid var(--line);gap:16px}
+    .nav.open .nav-links a{font-size:16px}
+    .book-grid{grid-template-columns:1fr}
+    .ba-grid{grid-template-columns:1fr;gap:10px}
+    .ba-grid .half img{height:240px}
+    .ba-arrow{transform:rotate(90deg);margin:-32px auto}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:560px){
+    .gallery{grid-template-columns:1fr;grid-auto-rows:200px}
+    .gallery .tall{grid-row:span 1}
+    .f-row{grid-template-columns:1fr}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoBodyShop",
+  "name":"Falcon's Auto Detailing & Painting L.L.C",
+  "alternateName":"Falcon's Auto Care",
+  "description":"Auto detailing, ceramic coating, paint correction, dent removal (PDR), headlight restoration, touch-up paint and full auto painting in Dubai.",
+  "telephone":"+971564778336",
+  "email":"falconsautodetailing&repair@gmail.com",
+  "address":{"@type":"PostalAddress","streetAddress":"11B Street, Ras Al Khor Industrial Area 2","addressLocality":"Dubai","addressCountry":"AE"},
+  "geo":{"@type":"GeoCoordinates","latitude":25.1797996,"longitude":55.3675401},
+  "openingHours":"Mo-Su 09:00-20:00",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"149"}
+}
+</script>
+</head>
+<body>
+
+<!-- promo strip (matches their Facebook promo posts) -->
+<div class="promo-strip">🔥 <b>NANO CERAMIC COATING PROMO</b> — bring back your car's shine at a price kabayans love. Limited slots only! <a href="#book" style="text-decoration:underline">Book now</a></div>
+
+<header>
+  <div class="wrap nav" id="nav">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d24b"/><stop offset="1" stop-color="#c99417"/></linearGradient></defs>
+        <path d="M4 28 Q22 18 44 14" stroke="url(#g)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M8 36 Q23 29 42 25" stroke="url(#g)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M14 44 Q26 38 40 34" stroke="url(#g)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="logo-name">Falcon's <span>Auto Care</span></div>
+        <span class="logo-sub">Detailing &amp; Painting · Dubai</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold" href="#book">Book Free Inspection</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <span class="kicker">Auto Detailing &amp; Painting · Dubai, UAE</span>
+    <h1>Your Car, <em>Reborn.</em></h1>
+    <p>Nano ceramic coating, paint correction, dent removal, trim restoration and full repaints — premium results without the premium price tag.</p>
+    <p class="taglish">Ibalik ang dating kintab at ganda ng iyong sasakyan, kabayan! 😎</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#book">Book Your Slot</a>
+      <a class="btn btn-ghost" href="https://wa.me/971564778336" target="_blank">💬 Chat on WhatsApp</a>
+    </div>
+    <div class="social-proof">
+      <span class="stat-pill"><span class="fb">f</span> 9.4K+ followers on Facebook</span>
+      <span class="stat-pill">⭐ 4.8★ on Google · 149 reviews</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-items">
+    <span><span class="dot"></span><b>Nano Ceramic</b> Coating</span>
+    <span><span class="dot"></span><b>Paint</b> Correction</span>
+    <span><span class="dot"></span><b>Dent</b> Removal</span>
+    <span><span class="dot"></span><b>Full</b> Repaint</span>
+    <span><span class="dot"></span><b>Headlight</b> Restoration</span>
+    <span><span class="dot"></span><b>Touch-Up</b> Paint</span>
+    <span><span class="dot"></span><b>Free</b> Inspection</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">What We Do</span>
+      <h2>Our Services</h2>
+      <p>From a simple polish to a full showroom-grade repaint — one garage, all your car's cosmetic needs.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="badge-promo">Promo</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.6L19 8.4l-3.4 3.3.8 4.8L12 14.2 7.6 16.5l.8-4.8L5 8.4l4.8-.8z"/><path d="M4 20h16"/></svg></div>
+        <h3>Nano Ceramic Coating</h3>
+        <p>Long-lasting nano ceramic protection with a deep, wet-look gloss. Shine that lasts years, not months — and cleaning becomes way easier.</p>
+        <div class="from">From AED 599 <small>Promo rate — limited slots</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+        <h3>Paint Correction &amp; Polish</h3>
+        <p>Spend wisely — don't repaint too soon! Faded, swirled or dull paint usually just needs machine correction. We restore the gloss for a fraction of a repaint's cost.</p>
+        <div class="from">From AED 350 <small>Per session, by car size</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21c-5 0-8-3-8-7 0-3 2-5 4-7 2-2 3-4 4-4s2 2 4 4c2 2 4 4 4 7 0 4-3 7-8 7z"/><path d="M9 14h.01M12 17h.01M15 14h.01"/></svg></div>
+        <h3>Dent Removal</h3>
+        <p>Nakakainis at nakakairita ang dent sa sasakyan, 'di ba? We remove dents — often with no repaint needed at all. Quick, clean, affordable.</p>
+        <div class="from">From AED 150 <small>Per panel / dent size</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 11h14M9 15h6"/></svg></div>
+        <h3>Plastic Trim Restoration</h3>
+        <p>Faded bumpers, mirrors and trims restored to look brand new. Think it's brand new? Exactly the point — no costly replacements needed.</p>
+        <div class="from">From AED 120 <small>Per set of trims</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 8h7a3 3 0 0 1 0 8h-7"/></svg></div>
+        <h3>Headlight Restoration</h3>
+        <p>Foggy, yellowed headlights polished back to crystal clarity. Better light at night — and your car instantly looks years younger.</p>
+        <div class="from">From AED 100 <small>Per headlight pair</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M15 3l6 6-9.5 9.5a4.2 4.2 0 0 1-6-6z"/><path d="M13 5l6 6"/></svg></div>
+        <h3>Smart Touch-Up Paint</h3>
+        <p>Scratches, chips and bumper scuffs fixed with color-matched smart touch-up — big result, small cost. No full panel repaint needed.</p>
+        <div class="from">From AED 80 <small>Per panel / scratch size</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M5 7h14"/></svg></div>
+        <h3>Full Body Paint &amp; Refinishing</h3>
+        <p>When a repaint is truly the only option, we deliver booth-sprayed, panel-matched finishes that look factory-fresh. Full car or single panel.</p>
+        <div class="from">From AED 1,800 <small>Quote by car size &amp; color</small></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>General Auto Service</h3>
+        <p>Busy sa work and can't take your car in? Book online, drop your keys with us, and we handle the rest — with updates on WhatsApp.</p>
+        <div class="from">Free Inspection <small>With any booking</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba" id="before-after">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Real Results</span>
+      <h2>From This... to This 😅</h2>
+      <p>Dust, sun fade and scratches don't stand a chance. This is what our detailing does.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="half">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&q=80" alt="Car looking dusty and dull before detailing">
+        <span class="tag tag-before">Before</span>
+      </div>
+      <div class="ba-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      <div class="half after">
+        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=900&q=80" alt="Gleaming deep-gloss car after ceramic coating and detailing">
+        <span class="tag tag-after">After</span>
+      </div>
+    </div>
+    <p class="ba-note">Sample transformation imagery — final version will feature this shop's actual before-and-after photos.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Straightforward Rates</span>
+      <h2>Pricing</h2>
+      <p>Transparent starting prices in AED. Every car is different, so we confirm the final quote after a free inspection — walang surprises.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <span class="promo-tag">🔥 Promo</span>
+        <h3>Nano Ceramic Coating</h3>
+        <div class="p"><sup>AED</sup>599</div>
+        <span class="strike">AED 1,200</span>
+        <ul>
+          <li>Single-layer nano coating</li>
+          <li>Deep wet-look gloss</li>
+          <li>Paint decontamination wash</li>
+          <li>Easier cleaning for years</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Premium Ceramic</h3>
+        <div class="p"><sup>AED</sup>999</div>
+        <ul>
+          <li>Two-layer coating + top coat</li>
+          <li>Full paint correction first</li>
+          <li>Longer protection warranty</li>
+          <li>Wheels &amp; trim dressed</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Paint Correction &amp; Polish</h3>
+        <div class="p"><sup>AED</sup>350+</div>
+        <ul>
+          <li>Machine polish, one-step</li>
+          <li>Removes swirls &amp; oxidation</li>
+          <li>Restores faded paint</li>
+          <li>Hydrophobic sealant finish</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Dent Removal</h3>
+        <div class="p"><sup>AED</sup>150+</div>
+        <ul>
+          <li>Per panel pricing</li>
+          <li>No-repaint PDR where possible</li>
+          <li>Hail &amp; parking dents</li>
+          <li>Same-day for small dents</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Trim Restoration</h3>
+        <div class="p"><sup>AED</sup>120+</div>
+        <ul>
+          <li>Bumpers, mirrors, trims</li>
+          <li>UV-faded plastic revived</li>
+          <li>Lasting finish, not grease-shine</li>
+          <li>Interior plastics too</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Full Body Respray</h3>
+        <div class="p"><sup>AED</sup>1,800+</div>
+        <ul>
+          <li>Booth-sprayed finish</li>
+          <li>Computer color matching</li>
+          <li>Full car or single panels</li>
+          <li>Panel &amp; color quotes vary</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">Prices are indicative starting rates — the final quote is confirmed after your <a href="#book">free inspection</a>. No obligation, walang pressure.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="ba" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our Work</span>
+      <h2>Gallery</h2>
+      <p>A taste of the shine we deliver — gloss you can check your reflection in.</p>
+    </div>
+    <div class="gallery">
+      <img class="tall" src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=700&q=80" alt="Glossy orange sport sedan after detailing">
+      <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=700&q=80" alt="Luxury sedan with mirror-like polished paint">
+      <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=700&q=80" alt="Deep red coupe gleaming after ceramic coating">
+      <img class="tall" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700&q=80" alt="White SUV restored to showroom condition">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700&q=80" alt="Sports car after paint correction">
+      <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700&q=80" alt="Classic compact car refreshed with new paint">
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS — real Google reviews -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">What Customers Say</span>
+      <h2>Rated 4.8 on Google</h2>
+      <div class="rev-head">
+        <span class="g-badge">G</span>
+        <span class="rev-score">4.8 ★ <small>149 Google reviews</small></span>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"I'm very happy with the quality of their work, especially the ceramic coating and Paintless Dent Repair. The car looks amazing and the finish is excellent. Highly recommended!"</p>
+        <div class="who">— <b>Kevin Jay B.</b> · Google review</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"They did an amazing job removing the dents and scratches on my car in just half a day! Reasonable price too with a big discount. 👍"</p>
+        <div class="who">— <b>Christopher C.</b> · Google review</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"My car looks like new again. The attention to detail, professionalism, and care they put into their work exceeded my expectations. They treated my car as if it were their own."</p>
+        <div class="who">— <b>Dominador M.</b> · Google review</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Detailing, paint correction, PDR, headlight restoration and ceramic coating — all in one shop. Staff very friendly and accommodating, and the price is reasonable. Located in Ras Al Khor."</p>
+        <div class="who">— <b>Ben P.</b> · Google review</div>
+      </div>
+    </div>
+    <p class="price-note"><a href="https://maps.google.com/?q=25.1797996,55.3675401" target="_blank">Read all 149 reviews on Google →</a></p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="book-info">
+      <span class="kicker">Inquiries &amp; Booking</span>
+      <h2>Book Your Appointment</h2>
+      <p>Busy ka ba sa work? Leave the form below and we'll confirm your slot on WhatsApp. Free inspection with every booking.</p>
+      <div class="contact-line">
+        <span class="ci"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <div><b>Call / WhatsApp</b><span>+971 56 477 8336</span></div>
+      </div>
+      <div class="contact-line">
+        <span class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+        <div><b>Email</b><span>falconsautodetailing&amp;repair@gmail.com</span></div>
+      </div>
+      <div class="contact-line">
+        <span class="ci"><svg viewBox="0 0 24 24"><path d="M12 21c-4.4-3.4-8-6.7-8-10.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 8 4.5C20 14.3 16.4 17.6 12 21z"/><circle cx="12" cy="10.5" r="2"/></svg></span>
+        <div><b>Location</b><span><a href="https://maps.google.com/?q=25.1797996,55.3675401" target="_blank" style="color:var(--gold)">11B Street, Ras Al Khor Industrial Area 2, Dubai →</a></span></div>
+      </div>
+      <div class="contact-line" style="border-bottom:none">
+        <span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+        <div><b>Hours</b><span>Open daily · 9:00 AM – 8:00 PM</span></div>
+      </div>
+    </div>
+    <form id="bookingForm" action="https://formsubmit.co/dcabrera70074@gmail.com" method="POST">
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_subject" value="🦅 New Booking — Falcon's Auto Care Website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_next" id="nextUrl" value="">
+      <div class="sent-banner" id="sentBanner">✅ Salamat, kabayan! Your booking request was sent — we'll get back to you on WhatsApp shortly.</div>
+      <div class="f-row">
+        <div>
+          <label for="name">Full Name *</label>
+          <input id="name" name="Name" type="text" required placeholder="Juan Dela Cruz">
+        </div>
+        <div>
+          <label for="phone">WhatsApp / Phone *</label>
+          <input id="phone" name="Phone" type="tel" required placeholder="+971 5X XXX XXXX">
+        </div>
+      </div>
+      <div class="f-row">
+        <div>
+          <label for="car">Vehicle Make &amp; Model *</label>
+          <input id="car" name="Vehicle" type="text" required placeholder="e.g. Nissan Patrol 2021">
+        </div>
+        <div>
+          <label for="date">Preferred Date</label>
+          <input id="date" name="Preferred Date" type="date">
+        </div>
+      </div>
+      <label for="service">Service Needed *</label>
+      <select id="service" name="Service" required>
+        <option value="">— Select a service —</option>
+        <option>Nano Ceramic Coating (PROMO)</option>
+        <option>Premium Ceramic Coating</option>
+        <option>Paint Correction &amp; Polish</option>
+        <option>Dent Removal</option>
+        <option>Plastic Trim Restoration</option>
+        <option>Full Body Paint / Respray</option>
+        <option>General Auto Service</option>
+        <option>Not sure — Free Inspection please</option>
+      </select>
+      <label for="message">Tell us about your car's condition</label>
+      <textarea id="message" name="Message" placeholder="e.g. Faded paint on the roof, small dent on the rear door..."></textarea>
+      <button class="btn btn-gold" type="submit">🦅 Send Booking Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Find Us</span>
+      <h2>Visit or Message Us</h2>
+      <p>Walk in for a free assessment, or reach us on any channel — we reply fast, promise.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card" style="text-align:center">
+        <div class="icon" style="margin:0 auto 16px"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l2-5.5a8.4 8.4 0 1 1 16-4z"/></svg></div>
+        <h3>WhatsApp</h3>
+        <p>+971 56 477 8336<br>Fastest way to reach us, kabayan!</p>
+        <a class="btn btn-gold" style="margin-top:16px" href="https://wa.me/971564778336?text=Hi%20Falcon%27s%20Auto%20Care!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank">Message Us</a>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="icon" style="margin:0 auto 16px"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+        <h3>Email</h3>
+        <p>falconsautodetailing&repair@gmail.com<br>For quotes &amp; inquiries</p>
+        <a class="btn btn-gold" style="margin-top:16px" href="mailto:falconsautodetailing%26repair@gmail.com">Email Us</a>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="icon" style="margin:0 auto 16px"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l-5-5 5-5M5 12h12"/></svg></div>
+        <h3>Facebook</h3>
+        <p>9.4K+ followers and counting<br>See our latest promos &amp; work</p>
+        <a class="btn btn-gold" style="margin-top:16px" href="https://www.facebook.com/search/top?q=Falcon%27s%20Auto%20Detailing%20%26%20Painting%20L.L.C" target="_blank">Follow Our Page</a>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="icon" style="margin:0 auto 16px"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17l-6.2 3.9 1.6-7L2 9.2l7.1-.6z"/></svg></div>
+        <h3>Google Reviews</h3>
+        <p>4.8★ from 149 customers<br>See why Dubai trusts us</p>
+        <a class="btn btn-gold" style="margin-top:16px" href="https://maps.google.com/?q=25.1797996,55.3675401" target="_blank">Read Reviews</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 48 48" style="width:34px;height:34px" aria-hidden="true">
+        <path d="M4 28 Q22 18 44 14" stroke="#e8b923" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M8 36 Q23 29 42 25" stroke="#e8b923" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M14 44 Q26 38 40 34" stroke="#e8b923" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="logo-name" style="font-size:19px">Falcon's <span>Auto Care</span></div>
+        <span class="logo-sub">Detailing &amp; Painting · Dubai</span>
+      </div>
+    </a>
+    <div class="muted">© 2026 <b>Falcon's Auto Detailing &amp; Painting L.L.C</b> — All rights reserved.</div>
+    <div class="muted">Website by <b>RED DEV</b></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/971564778336?text=Hi%20Falcon%27s%20Auto%20Care!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 2.7C8.7 2.7 2.9 8.5 2.9 15.8c0 2.9 1 5.6 2.6 7.8L2.9 29.3l5.9-2.5c2.1 1.4 4.6 2.2 7.2 2.2 7.3 0 13.1-5.8 13.1-13.1S23.3 2.7 16 2.7zm7.6 18.4c-.3.9-1.8 1.7-2.6 1.9-.8.2-1.7.3-2.9-.2-1.2-.5-3.7-1.5-6.3-4.4-2.6-2.9-2.6-5.1-2.9-5.9-.3-.9.3-2.1.8-2.6.5-.5.8-.5 1.1-.5h.8c.3 0 .6 0 .9.6.3.7 1 2.4 1.1 2.6.1.2.2.5 0 .8-.2.3-.3.5-.5.8-.2.3-.5.5-.3.9-.2.3-.8.9-1.3 1.4-.3.3-.7.8-.5 1.5.2.7 1 2.4 2.3 3.7 1.7 1.7 3.2 2.3 3.9 2.6.7.3 1.1.3 1.5-.2.4-.5 1.4-1.6 1.8-2.2.4-.5.7-.4 1.2-.3.5.2 2.9 1.4 3.4 1.6.5.3.8.4.9.6.1.4.1 1.1-.2 1.9z"/></svg>
+</a>
+
+<script>
+  // mobile menu
+  var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  burger.addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+
+  // FormSubmit redirect back to this page with ?sent=1
+  var next=document.getElementById('nextUrl');
+  next.value=location.origin+location.pathname+'?sent=1#book';
+  if(new URLSearchParams(location.search).get('sent')==='1'){
+    document.getElementById('sentBanner').classList.add('show');
+  }
+</script>
+</body>
+</html>
